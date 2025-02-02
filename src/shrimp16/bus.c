@@ -1,5 +1,7 @@
 #include <bus.h>
 
+#include <stdio.h>
+
 bus_t *bus_new(void) {
     bus_t *bus = (bus_t *)malloc(sizeof(bus_t));
 

@@ -1,4 +1,6 @@
-#include "cpu.h"
+#include <cpu.h>
+
+#include <memory.h>
 
 uint16_t register_read(registers_t *registers, size_t index) {
     return registers->registers[index];

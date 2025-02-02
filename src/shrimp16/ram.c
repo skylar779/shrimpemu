@@ -1,5 +1,7 @@
 #include <ram.h>
 
+#include <memory.h>
+
 ram_t * ram_new(void) {
     ram_t *ram = (ram_t *)malloc(sizeof(ram_t));
     memset(ram->memory, 0, RAM_SIZE);

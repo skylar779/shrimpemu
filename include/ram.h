@@ -1,17 +1,12 @@
 #ifndef RAM_H
 #define RAM_H
 
-#include <stdint.h>
-#include <memory.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #define RAM_SIZE 0x10000
 #define RAM_BASE 0x50
 #define RAM_END (RAM_BASE + RAM_SIZE)
-
-#define BYTE     8
-#define WORD     16
 
 typedef struct {
     uint16_t memory[RAM_SIZE];

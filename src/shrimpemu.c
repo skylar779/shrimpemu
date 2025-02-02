@@ -1,4 +1,9 @@
 #include <cpu.h>
+#include <bus.h>
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdint.h>
 
 int main(int argc, char **argv) {
     if (argc < 2) {

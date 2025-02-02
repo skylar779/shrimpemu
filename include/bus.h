@@ -3,6 +3,9 @@
 
 #include <ram.h>
 
+#include <stdlib.h>
+#include <stdint.h>
+
 typedef struct {
     ram_t *ram;
 } bus_t;

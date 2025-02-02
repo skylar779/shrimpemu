@@ -1,9 +1,10 @@
 #ifndef CPU_H
 #define CPU_H
 
-#include <stdint.h>
-#include <stdlib.h>
 #include <bus.h>
+
+#include <stdlib.h>
+#include <stdint.h>
 
 #define BYTE            8
 #define WORD            16
