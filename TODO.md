@@ -4,6 +4,7 @@ TODO
 ### Todo
 
 - [ ] Make a TUI screen for the emulator.
+- [ ] Reformat the code.
 
 ### In Progress
 
