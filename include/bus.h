@@ -1,5 +1,5 @@
-#ifndef _BUS_H
-#define _BUS_H
+#ifndef BUS_H
+#define BUS_H
 
 #include <ram.h>
 
