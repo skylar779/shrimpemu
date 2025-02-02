@@ -6,11 +6,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define RAM_SIZE 0x10000
+#define RAM_SIZE 0xffaf
 #define RAM_BASE 0x50
-#define RAM_END (RAM_BASE + RAM_SIZE)
+#define RAM_END (RAM_SIZE + RAM_BASE)
 
-#define BYTE     8
 #define WORD     16
 
 typedef struct {

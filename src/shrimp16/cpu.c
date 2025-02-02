@@ -21,3 +21,37 @@ void cpu_free(cpu_t *cpu) {
     bus_free(cpu->bus);
     free(cpu);
 }
+
+uint16_t cpu_fetch(cpu_t *cpu) {
+    uint16_t present_program_counter = cpu->program_counter;
+
+    return bus_read(cpu->bus, present_program_counter);
+}
+
+void execute(cpu_t *cpu) {
+    uint16_t instruction = cpu_fetch(cpu);
+    uint16_t opcode = (instruction & 0xf800) >> 11;
+    uint16_t flags = (instruction & 0x70) >> 4;
+    
+    switch (opcode) {
+    case ADD:
+        if (flags & 0x4) {
+            cpu->program_counter += 1;
+            execute_imm(cpu, instruction);
+            cpu->program_counter += 1;
+        }
+    
+    default:
+        break;
+    }
+}
+
+void execute_general(cpu_t *cpu, uint16_t instruction)
+{
+}
+
+void execute_imm(cpu_t *cpu, uint16_t instruction) {
+    uint16_t immediate = cpu_fetch(cpu);
+
+    
+}
