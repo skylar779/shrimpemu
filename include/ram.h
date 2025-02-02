@@ -1,5 +1,5 @@
-#ifndef _MEMORY_H
-#define _MEMORY_H
+#ifndef _RAM_H
+#define _RAM_H
 
 #include <stdint.h>
 #include <memory.h>
@@ -23,13 +23,7 @@ void ram_free(ram_t *ram);
 
 void ram_initialize(ram_t *ram, uint16_t *binary, size_t binary_size);
 
-uint16_t ram_read(ram_t *ram, uint16_t address, size_t size);
-void ram_write(ram_t *ram, uint16_t address, uint16_t value, size_t size);
-
-uint16_t ram_read8(ram_t *ram, uint16_t address);
-uint16_t ram_read16(ram_t *ram, uint16_t address);
-
-void ram_write8(ram_t *ram, uint16_t address, uint16_t value);
-void ram_write16(ram_t *ram, uint16_t address, uint16_t value);
+uint16_t ram_read(ram_t *ram, uint16_t address);
+void ram_write(ram_t *ram, uint16_t address, uint16_t value);
 
 #endif
